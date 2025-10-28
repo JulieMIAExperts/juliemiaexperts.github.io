@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact – Julie Mia Experts</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <!-- MENU GAUCHE -->
+  <nav class="menu-gauche">
+    <ul>
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="a-propos.html">À propos</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- CONTENU PRINCIPAL -->
+  <main class="main-content">
+    <div class="logo">
+      <img src="images/logo.png" alt="Logo Julie Mia Experts">
+    </div>
+
+    <div class="container">
+      <h1>Contactez-nous</h1>
+      <p>
+        Vous souhaitez en savoir plus ? N’hésitez pas à nous contacter via le formulaire ci-dessous :
+      </p>
+
+      <form action="#" method="post">
+        <label for="nom">Nom :</label><br>
+        <input type="text" id="nom" name="nom" placeholder="Votre nom" required><br><br>
+
+        <label for="email">Email :</label><br>
+        <input type="email" id="email" name="email" placeholder="Votre adresse email" required><br><br>
+
+        <label for="message">Message :</label><br>
+        <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea><br><br>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
