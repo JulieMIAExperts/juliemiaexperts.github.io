@@ -24,6 +24,7 @@ html, body {
   height: 100%;
   font-family: Inter, system-ui, Arial, sans-serif;
   color: var(--ink);
+  margin-left: 180px; /* espace réservé au menu gauche */
 
   /* 🎨 Dégradé animé et fixe, avec transparence intégrée */
   background: linear-gradient(
@@ -94,11 +95,11 @@ h1 {
   color: transparent;
 }
 
-/* --- MENU DROIT --- */
-.menu-droite {
+/* --- MENU GAUCHE --- */
+.menu-gauche {
   position: fixed; /* le menu reste visible même quand on défile */
   top: 0;
-  right: 0;
+  left: 0;
   height: 100vh; /* prend toute la hauteur de la page */
   width: 180px;
   background-color: rgba(255, 255, 255, 0.15);
@@ -107,23 +108,23 @@ h1 {
   flex-direction: column;
   align-items: center;
   padding-top: 60px;
-  border-left: 1px solid rgba(255,255,255,0.2);
+  border-right: 1px solid rgba(255,255,255,0.2);
 }
 
-.menu-droite ul {
+.menu-gauche ul {
   list-style: none;
   padding: 0;
   margin: 0;
   width: 100%;
 }
 
-.menu-droite li {
+.menu-gauche li {
   width: 100%;
   text-align: center;
   margin: 15px 0;
 }
 
-.menu-droite a {
+.menu-gauche a {
   display: block;
   text-decoration: none;
   color: white;
@@ -132,11 +133,8 @@ h1 {
   transition: background 0.3s;
 }
 
-.menu-droite a:hover {
+.menu-gauche a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-body {
-  margin-right: 180px; /* espace réservé au menu droit */
-}
 
