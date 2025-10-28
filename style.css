@@ -187,3 +187,21 @@ button:hover {
     padding: 20px;
   }
 }
+
+/* --- PIED DE PAGE --- */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-top: 1px solid rgba(0, 38, 76, 0.1);
+  color: #00264C;
+  font-size: 0.9em;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 0;
+}
+
