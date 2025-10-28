@@ -93,21 +93,20 @@ h1 {
   background-clip: text;
   color: transparent;
 }
-
-/* --- MENU GAUCHE --- */
+/* --- MENU GAUCHE FIXE --- */
 .menu-gauche {
-  position: fixed; /* le menu reste visible même quand on défile */
+  position: fixed;
   top: 0;
   left: 0;
-  height: 100vh; /* prend toute la hauteur de la page */
+  height: 100vh;
   width: 180px;
-  background-color: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(10px);
+  background-color: rgba(51, 103, 214, 0.9);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 60px;
-  border-right: 1px solid rgba(255,255,255,0.2);
+  padding-top: 40px;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  z-index: 1000;
 }
 
 .menu-gauche ul {
@@ -120,22 +119,69 @@ h1 {
 .menu-gauche li {
   width: 100%;
   text-align: center;
-  margin: 15px 0;
+  margin: 12px 0;
 }
 
 .menu-gauche a {
   display: block;
+  color: #fff;
   text-decoration: none;
+  padding: 10px 0;
+  font-weight: 600;
+}
+
+.menu-gauche a:hover,
+.menu-gauche a.active {
+  background: rgba(255,255,255,0.1);
+}
+
+/* --- CONTENU PRINCIPAL --- */
+.main-content {
+  margin-left: 180px; /* espace réservé au menu gauche */
+  padding: 40px;
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.logo img {
+  width: 120px;
+  height: auto;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
   color: white;
-  font-weight: 500;
-  padding: 10px;
-  transition: background 0.3s;
 }
 
-.menu-gauche a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
+/* --- Responsive (mobile/tablette) --- */
+@media (max-width: 800px) {
+  .menu-gauche {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0;
+  }
 
+  .menu-gauche ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    padding-top: 20px;
+  }
+}
 
 
 
