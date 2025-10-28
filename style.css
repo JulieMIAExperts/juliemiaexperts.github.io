@@ -116,6 +116,7 @@ h1 {
   text-decoration: none;
   padding: 10px 0;
   font-weight: 600;
+  text-shadow: 0 0 5px rgba(0,0,0,0.3);
 }
 
 .menu-gauche a:hover,
@@ -170,6 +171,7 @@ h1 {
     padding-top: 20px;
   }
 }
+
 
 
 
