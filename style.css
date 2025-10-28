@@ -114,7 +114,7 @@ body {
 
 /* --- ESPACEMENT ENTRE LES PARAGRAPHES DANS LES BLOCS DE TEXTE --- */
 .container p {
-  margin-bottom: 50px;  /* espace entre les paragraphes */
+  margin-bottom: 23px;  /* espace entre les paragraphes */
   line-height: 1.6;     /* rend la lecture plus fluide */
 }
 .container h1, .container h2, .container h3 {
@@ -240,6 +240,7 @@ button:hover {
   position: relative;
   z-index: 1;
 }
+
 
 
 
