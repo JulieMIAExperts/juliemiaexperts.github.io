@@ -1,24 +1,4 @@
-:root {
-  --navy: #0C2D52;
-  --ink: #0B1020;
-  --muted: #6B7280;
-  --bg: #fff;
-  --stroke: #E5E7EB;
-  --radius: 12px;
-  --gap: 10px;
-  --ring: rgba(12,45,82,.9);
-
-  /* couleurs de gradient du calculateur */
-  --gradA: #F7A8D8;
-  --gradB: #FFFFFF;
-  --gradC: #6EA8FF;
-}
-
-*, *::before, *::after {
-  box-sizing: border-box;
-}
-
-/* --- FOND ANIMÉ DÉGRADÉ --- */
+/* --- FOND ANIMÉ DÉGRADÉ BLEU-VIOLET DOUX --- */
 @keyframes fondAnime {
   0% {
     background-position: 0% 50%;
@@ -34,66 +14,34 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', Roboto, sans-serif;
- background: linear-gradient(135deg, rgba(2, 127, 254, 0.25), rgba(198, 91, 173, 0.25), rgba(2, 127, 254, 0.25));
+  background: linear-gradient(135deg,
+    rgba(2, 127, 254, 0.30),
+    rgba(130, 80, 160, 0.18),
+    rgba(2, 127, 254, 0.35)
+  );
   background-size: 200% 200%;
   animation: fondAnime 20s ease infinite;
+  background-attachment: fixed;
   color: #00264C;
   min-height: 100vh;
 }
 
-
-/* ====== CONTENEUR PRINCIPAL ====== */
-.wrap {
-  max-width: 820px;
-  margin: 0 auto;
-  padding: 16px 18px 24px;
-}
-
-
-@media (max-width: 820px) {
-  .logo-top img {
-    height: 64px;
-  }
-}
-
-/* ====== TITRE CENTRÉ ====== */
-h1 {
-  text-align: center;
-  font-weight: 800;
-  font-size: clamp(24px, 3vw, 36px);
-  margin: 12px 0 24px;
-  letter-spacing: 0.3px;
-  background-clip: text;
-}
-
-/* ====== SLOGAN STYLE "PILL" ====== */
-.pill {
-  display: block;
-  text-align: center;
-  font-weight: 800;
-  font-size: clamp(16px, 2.2vw, 22px);
-  margin: 0 0 24px;
-  letter-spacing: .2px;
-  background: linear-gradient(90deg, var(--gradA), var(--gradB), var(--gradC));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-/* --- MENU GAUCHE FIXE --- */
+/* --- MENU GAUCHE TRANSPARENT & FLOU --- */
 .menu-gauche {
   position: fixed;
   top: 0;
   left: 0;
   height: 100vh;
   width: 180px;
-  background: rgba(255, 255, 255, 0.15); /* semi-transparent */
-  backdrop-filter: blur(10px);            /* flou “verre dépoli” */
-  -webkit-backdrop-filter: blur(10px);    /* compatibilité Safari */
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 40px;
-  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+  border-right: 1px solid rgba(0, 38, 76, 0.15);
+  box-shadow: 2px 0 8px rgba(0,0,0,0.05);
   z-index: 1000;
 }
 
@@ -112,25 +60,29 @@ h1 {
 
 .menu-gauche a {
   display: block;
-  color: #fff;
+  color: #00264C;
   text-decoration: none;
   padding: 10px 0;
   font-weight: 600;
-  text-shadow: 0 0 5px rgba(0,0,0,0.3);
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .menu-gauche a:hover,
 .menu-gauche a.active {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(2, 127, 254, 0.15);
   border-radius: 8px;
+  transform: scale(1.05);
 }
 
 /* --- CONTENU PRINCIPAL --- */
 .main-content {
-  margin-left: 180px; /* espace réservé au menu gauche */
+  margin-left: 180px;
   padding: 40px;
+  transition: margin-left 0.2s;
+  color: #00264C;
 }
 
+/* --- LOGO CENTRÉ --- */
 .logo {
   text-align: center;
   margin-bottom: 20px;
@@ -141,36 +93,27 @@ h1 {
   height: auto;
 }
 
+/* --- CONTENEUR AVEC FOND VERRE DÉPOLI --- */
 .container {
   max-width: 900px;
   margin: auto;
-  background-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.3);
   padding: 30px;
   border-radius: 15px;
-  color: white;
+  color: #00264C;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
 }
 
-/* --- Responsive (mobile/tablette) --- */
-@media (max-width: 800px) {
-  .menu-gauche {
-    position: relative;
-    width: 100%;
-    height: auto;
-    flex-direction: row;
-    justify-content: center;
-    padding: 10px 0;
-  }
+/* --- ANIMATION D'APPARITION DU CONTENU --- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
 
-  .menu-gauche ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  .main-content {
-    margin-left: 0;
-    padding-top: 20px;
-  }
+.container, .logo {
+  animation: fadeIn 1s ease forwards;
 }
 
 /* --- FORMULAIRE DE CONTACT --- */
@@ -183,17 +126,17 @@ form {
 input, textarea {
   width: 100%;
   padding: 10px;
-  border: none;
+  border: 1px solid rgba(0, 38, 76, 0.3);
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
+  background: rgba(255, 255, 255, 0.6);
+  color: #00264C;
   font-size: 1em;
   backdrop-filter: blur(5px);
 }
 
 input::placeholder,
 textarea::placeholder {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(0, 38, 76, 0.6);
 }
 
 button {
@@ -209,20 +152,38 @@ button {
 }
 
 button:hover {
-  opacity: 0.85;
+  opacity: 0.9;
   transform: scale(1.05);
 }
 
+/* --- RESPONSIVE DESIGN --- */
+@media (max-width: 800px) {
+  .menu-gauche {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px 0;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 38, 76, 0.2);
+    box-shadow: none;
+    backdrop-filter: blur(8px);
+  }
 
+  .menu-gauche ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
 
+  .main-content {
+    margin-left: 0;
+    padding-top: 20px;
+  }
 
-
-
-
-
-
-
-
-
-
-
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+}
