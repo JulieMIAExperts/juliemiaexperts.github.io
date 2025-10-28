@@ -110,6 +110,7 @@ body {
   box-shadow: 0 2px 12px rgba(0,0,0,0.05);
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+   margin-bottom: 40px; /* espace entre deux blocs */
 }
 
 /* --- ESPACEMENT ENTRE LES PARAGRAPHES DANS LES BLOCS DE TEXTE --- */
@@ -122,10 +123,6 @@ body {
   margin-bottom: 20px;  /* espace sous le titre */
 }
 
-/* --- ESPACEMENT ENTRE PLUSIEURS CONTAINERS --- */
-.container {
-  margin-bottom: 40px; /* espace entre deux blocs */
-}
 
 /* pour éviter un grand vide en bas de page */
 .container:last-of-type {
@@ -249,6 +246,7 @@ button:hover {
   position: relative;
   z-index: 1;
 }
+
 
 
 
