@@ -58,7 +58,7 @@ html, body {
 /* ====== LOGO TOP CENTRÉ ====== */
 
 .logo img {
-  max-width: 50px;
+  max-width: 20px;
   width: 80%;
   height: auto;
 }
@@ -135,6 +135,7 @@ h1 {
 .menu-gauche a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
+
 
 
 
