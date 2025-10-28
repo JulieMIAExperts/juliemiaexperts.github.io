@@ -37,7 +37,7 @@ body {
  background: linear-gradient(135deg, rgba(2, 127, 254, 0.25), rgba(198, 91, 173, 0.25), rgba(2, 127, 254, 0.25));
   background-size: 200% 200%;
   animation: fondAnime 20s ease infinite;
-  color: #fff;
+  color: #00264C;
   min-height: 100vh;
 }
 
@@ -212,6 +212,7 @@ button:hover {
   opacity: 0.85;
   transform: scale(1.05);
 }
+
 
 
 
