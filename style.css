@@ -121,7 +121,8 @@ h1 {
 
 .menu-gauche a:hover,
 .menu-gauche a.active {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
 }
 
 /* --- CONTENU PRINCIPAL --- */
@@ -171,6 +172,7 @@ h1 {
     padding-top: 20px;
   }
 }
+
 
 
 
