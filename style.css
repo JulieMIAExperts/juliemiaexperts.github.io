@@ -24,7 +24,6 @@ html, body {
   height: 100%;
   font-family: Inter, system-ui, Arial, sans-serif;
   color: var(--ink);
-  margin-left: 180px; /* espace réservé au menu gauche */
 
   /* 🎨 Dégradé animé et fixe, avec transparence intégrée */
   background: linear-gradient(
@@ -136,6 +135,7 @@ h1 {
 .menu-gauche a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
+
 
 
 
