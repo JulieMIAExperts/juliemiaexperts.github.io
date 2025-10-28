@@ -105,6 +105,17 @@ body {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
 }
+/* --- ESPACEMENT ENTRE LES PARAGRAPHES DANS LES BLOCS DE TEXTE --- */
+.container p {
+  margin-bottom: 18px;  /* espace entre les paragraphes */
+  line-height: 1.6;     /* rend la lecture plus fluide */
+}
+
+.container h1, .container h2, .container h3 {
+  margin-top: 0;
+  margin-bottom: 20px;  /* espace sous le titre */
+}
+
 
 /* --- ANIMATION D'APPARITION DU CONTENU --- */
 @keyframes fadeIn {
@@ -222,6 +233,7 @@ button:hover {
   position: relative;
   z-index: 1;
 }
+
 
 
 
