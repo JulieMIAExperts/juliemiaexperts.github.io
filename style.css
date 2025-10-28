@@ -18,35 +18,29 @@
   box-sizing: border-box;
 }
 
-/* ====== FOND GLOBAL ANIMÉ AVEC TRANSPARENCE ====== */
-html, body {
+/* --- FOND ANIMÉ DÉGRADÉ --- */
+@keyframes fondAnime {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body {
   margin: 0;
-  height: 100%;
-  font-family: Inter, system-ui, Arial, sans-serif;
-  color: var(--ink);
-
-  /* 🎨 Dégradé animé et fixe, avec transparence intégrée */
-  background: linear-gradient(
-    -45deg,
-    rgba(247, 168, 216, 0.8), /* gradA */
-    rgba(199, 182, 247, 0.8), /* gradB */
-    rgba(110, 168, 255, 0.8), /* gradC */
-    rgba(247, 168, 216, 0.8)  /* retour gradA */
-  );
-  background-size: 400% 400%;
-  animation: gradientMove 18s ease infinite;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  backdrop-filter: blur(10px); /* 👈 effet verre dépoli */
-  -webkit-backdrop-filter: blur(10px);
+  font-family: 'Segoe UI', Roboto, sans-serif;
+ background: linear-gradient(135deg, rgba(2, 127, 254, 0.25), rgba(198, 91, 173, 0.25), rgba(2, 127, 254, 0.25));
+  background-size: 200% 200%;
+  animation: fondAnime 20s ease infinite;
+  color: #fff;
+  min-height: 100vh;
 }
 
-/* ====== ANIMATION DU DÉGRADÉ ====== */
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
-}
 
 /* ====== CONTENEUR PRINCIPAL ====== */
 .wrap {
@@ -174,6 +168,7 @@ h1 {
     padding-top: 20px;
   }
 }
+
 
 
 
