@@ -89,9 +89,15 @@ body {
 }
 
 .logo img {
-  width: 120px;
+  width: 180px;  /* taille augmentée */
   height: auto;
+  transition: transform 0.3s ease;
 }
+
+.logo img:hover {
+  transform: scale(1.05); /* petit effet élégant au survol */
+}
+
 
 /* --- CONTENEUR AVEC FOND VERRE DÉPOLI --- */
 .container {
@@ -233,6 +239,7 @@ button:hover {
   position: relative;
   z-index: 1;
 }
+
 
 
 
