@@ -56,17 +56,13 @@ html, body {
 }
 
 /* ====== LOGO TOP CENTRÉ ====== */
-.logo-top {
-  display: flex;
-  justify-content: center;
-  margin: 4px 0 2px;
+
+.logo img {
+  max-width: 96px;
+  width: 80%;
+  height: auto;
 }
 
-.logo-top img {
-  height: 96px;
-  width: auto;
-  display: block;
-}
 
 @media (max-width: 820px) {
   .logo-top img {
@@ -97,3 +93,4 @@ h1 {
   background-clip: text;
   color: transparent;
 }
+
