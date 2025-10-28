@@ -122,6 +122,15 @@ body {
   margin-bottom: 20px;  /* espace sous le titre */
 }
 
+/* --- ESPACEMENT ENTRE PLUSIEURS CONTAINERS --- */
+.container {
+  margin-bottom: 40px; /* espace entre deux blocs */
+}
+
+/* pour éviter un grand vide en bas de page */
+.container:last-of-type {
+  margin-bottom: 0;
+}
 
 
 /* --- ANIMATION D'APPARITION DU CONTENU --- */
@@ -240,6 +249,7 @@ button:hover {
   position: relative;
   z-index: 1;
 }
+
 
 
 
