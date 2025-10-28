@@ -186,7 +186,12 @@ button:hover {
     margin: 20px;
     padding: 20px;
   }
+  
+  .footer {
+  margin-left: 0; /* sur mobile, le menu passe en haut donc on enlève la marge */
+  }
 }
+
 /* --- PIED DE PAGE AVEC LIGNE DÉGRADÉE --- */
 .footer {
   position: relative;
@@ -217,5 +222,6 @@ button:hover {
   position: relative;
   z-index: 1;
 }
+
 
 
