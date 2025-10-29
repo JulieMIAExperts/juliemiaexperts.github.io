@@ -216,6 +216,17 @@ button:hover {
   }
 }
 
+/* --- IMAGES DANS LES CONTAINERS --- */
+.image-simple {
+  display: block;
+  max-width: 100%;      /* empêche l’image de dépasser */
+  height: auto;         /* conserve les proportions */
+  border-radius: 12px;  /* arrondit légèrement les coins */
+  margin: 20px auto;    /* centre l’image et ajoute de l’espace */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+
 /* --- PIED DE PAGE AVEC LIGNE DÉGRADÉE --- */
 .footer {
   position: relative;
@@ -246,6 +257,7 @@ button:hover {
   position: relative;
   z-index: 1;
 }
+
 
 
 
