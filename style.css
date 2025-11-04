@@ -123,6 +123,16 @@ body {
   margin-bottom: 20px;  /* espace sous le titre */
 }
 
+h1.gradient-text {
+  font-size: 2.5em; /* adapte la taille à ton besoin */
+  font-weight: 700;
+  text-align: center;
+  background: linear-gradient(90deg, #027FFE, #C65BAD); /* bleu → rose */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text; /* pour compatibilité */
+}
+
 
 /* pour éviter un grand vide en bas de page */
 .container:last-of-type {
@@ -307,6 +317,7 @@ button:hover {
     width: 100%;  /* sur mobile, les images passent l'une sous l'autre */
   }
 }
+
 
 
 
