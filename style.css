@@ -279,4 +279,35 @@ button:hover {
   border-radius: 16px;
 }
 
+/* --- DEUX IMAGES CÔTE À CÔTE --- */
+.image-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* espace entre les images */
+  flex-wrap: wrap; /* pour repasser en colonne sur petit écran */
+  margin: 20px auto;
+}
+
+.image-row img {
+  width: 45%;               /* deux images côte à côte avec marge */
+  height: auto;
+  border-radius: 15px;      /* coins arrondis */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-row img:hover {
+  transform: scale(1.03);   /* effet zoom doux au survol */
+}
+
+/* --- ADAPTATION MOBILE --- */
+@media (max-width: 700px) {
+  .image-row img {
+    width: 100%;  /* sur mobile, les images passent l'une sous l'autre */
+  }
+}
+
+
+
 
