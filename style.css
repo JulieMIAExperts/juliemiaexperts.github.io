@@ -124,7 +124,7 @@ body {
 }
 
 h1.gradient-text {
-  font-size: 2.5em; /* adapte la taille à ton besoin */
+  font-size: 1.8em;
   font-weight: 700;
   background: linear-gradient(90deg, #027FFE, #C65BAD); /* bleu → rose */
   text-align: left;
@@ -317,6 +317,7 @@ button:hover {
     width: 100%;  /* sur mobile, les images passent l'une sous l'autre */
   }
 }
+
 
 
 
